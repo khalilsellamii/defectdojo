@@ -1,5 +1,42 @@
 apiVersion: v1
 entries:
+  defectdojo:
+  - apiVersion: v2
+    appVersion: 2.32.1
+    created: "2024-03-13T15:10:13.483076739+01:00"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: ~9.19.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: ~11.9.0
+    - alias: postgresqlha
+      condition: postgresqlha.enabled
+      name: postgresql-ha
+      repository: https://charts.bitnami.com/bitnami
+      version: ~9.4.0
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: ~11.16.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: ~16.13.0
+    description: A Helm chart for Kubernetes to install DefectDojo
+    digest: 2b8eee1a9d39660be8c956bb578ae361f7c91b012d09e54db3e1d4cb903dbb05
+    icon: https://www.defectdojo.org/img/favicon.ico
+    maintainers:
+    - email: defectdojo-project@owasp.org
+      name: madchap
+      url: https://github.com/DefectDojo/django-DefectDojo
+    name: defectdojo
+    urls:
+    - defectdojo-1.6.115.tgz
+    version: 1.6.115
   mysql:
   - annotations:
       category: Database
@@ -13,7 +50,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.0.36
-    created: "2024-03-13T14:55:43.489209473+01:00"
+    created: "2024-03-13T15:10:13.486530685+01:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -46,7 +83,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 14.5.0
-    created: "2024-03-13T14:55:43.509695295+01:00"
+    created: "2024-03-13T15:10:13.491209408+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -81,7 +118,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 14.5.0
-    created: "2024-03-13T14:55:43.527426367+01:00"
+    created: "2024-03-13T15:10:13.498599798+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -120,7 +157,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.11.18
-    created: "2024-03-13T14:55:43.546425426+01:00"
+    created: "2024-03-13T15:10:13.511132377+01:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -151,7 +188,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 6.2.7
-    created: "2024-03-13T14:55:43.561025183+01:00"
+    created: "2024-03-13T15:10:13.516530766+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -179,4 +216,4 @@ entries:
     urls:
     - charts/redis-16.13.2.tgz
     version: 16.13.2
-generated: "2024-03-13T14:55:43.460569179+01:00"
+generated: "2024-03-13T15:10:13.447538833+01:00"
