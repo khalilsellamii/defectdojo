@@ -1,0 +1,182 @@
+apiVersion: v1
+entries:
+  mysql:
+  - annotations:
+      category: Database
+      images: |
+        - name: mysql
+          image: docker.io/bitnami/mysql:8.0.36-debian-11-r4
+        - name: mysqld-exporter
+          image: docker.io/bitnami/mysqld-exporter:0.15.1-debian-11-r5
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r96
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 8.0.36
+    created: "2024-03-13T14:55:43.489209473+01:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MySQL is a fast, reliable, scalable, and easy to use open source
+      relational database system. Designed to handle mission-critical, heavy-load
+      production applications.
+    digest: ce316b83566b786e355bb264fb8cdceb864aae2816f583ae2c22275a7f5ddcd9
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+    keywords:
+    - mysql
+    - database
+    - sql
+    - cluster
+    - high availability
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: mysql
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/mysql
+    urls:
+    - charts/mysql-9.19.1.tgz
+    version: 9.19.1
+  postgresql:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 14.5.0
+    created: "2024-03-13T14:55:43.509695295+01:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: fd7937464e52c1e643c45cbbf3758bcedfab41753d6cb34c6b4969ec1d77d0e8
+    home: https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+    - https://www.postgresql.org/
+    urls:
+    - charts/postgresql-11.9.13.tgz
+    version: 11.9.13
+  postgresql-ha:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 14.5.0
+    created: "2024-03-13T14:55:43.527426367+01:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: This PostgreSQL cluster solution includes the PostgreSQL replication
+      manager, an open-source tool for managing replication and failover on PostgreSQL
+      clusters.
+    digest: 7e5cfd966373d89d1820b9c84011e455e595180af182870330213262a4a29957
+    home: https://github.com/bitnami/charts/tree/main/bitnami/postgresql-ha
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - repmgr
+    - pgpool
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    - high availability
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: postgresql-ha
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+    - https://www.postgresql.org/
+    urls:
+    - charts/postgresql-ha-9.4.11.tgz
+    version: 9.4.11
+  rabbitmq:
+  - annotations:
+      category: Infrastructure
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 3.11.18
+    created: "2024-03-13T14:55:43.546425426+01:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: RabbitMQ is an open source general-purpose message broker that is
+      designed for consistent, highly-available messaging scenarios (both synchronous
+      and asynchronous).
+    digest: fc4bfc4f7ae303e43e516633ca6c128a8bb103e9094353f4d690bf1c9d1e664f
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: rabbitmq
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/rabbitmq
+    urls:
+    - charts/rabbitmq-11.16.2.tgz
+    version: 11.16.2
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.2.7
+    created: "2024-03-13T14:55:43.561025183+01:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: 358c629ca6d1d5f96cfa4191b57f04244d55a4884c95cb76c0cf256b0a5b6826
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    urls:
+    - charts/redis-16.13.2.tgz
+    version: 16.13.2
+generated: "2024-03-13T14:55:43.460569179+01:00"
